@@ -18,7 +18,7 @@
     .card {
       background: white;
       border-radius: 20px;
-      padding: 40px 32px;
+      padding: 40px 32px 32px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.10);
       max-width: 380px;
       width: 90%;
@@ -28,31 +28,60 @@
       max-width: 100%;
       margin-bottom: 8px;
     }
-    p  { color: #666; margin-bottom: 28px; font-size: 15px; }
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
+    p { color: #666; margin-bottom: 24px; font-size: 15px; }
+    .store-btn {
+      display: block;
+      margin: 10px auto;
+      width: 220px;
+      height: 65px;
+      overflow: hidden;
       border-radius: 12px;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
-      margin: 8px;
-      color: white;
-      transition: opacity 0.2s;
+      transition: opacity 0.2s, transform 0.15s;
     }
-    .btn:hover { opacity: 0.85; }
-    .ios     { background: #000; }
-    .android { background: #01875f; }
+    .store-btn:hover {
+      opacity: 0.88;
+      transform: scale(1.03);
+    }
+    .store-btn img {
+      width: 440px;
+      max-width: none;
+      height: auto;
+      display: block;
+    }
+    .google-play img { margin-top: 0; }
+    .app-store img   { margin-top: -65px; }
   </style>
 </head>
 <body>
   <div class="card">
     <img class="logo" src="logo.png" alt="Broccole" />
     <p>Redirecting you to the right store&hellip;</p>
-    <a class="btn ios"     href="https://apps.apple.com/eg/app/broccole/id6746214631">&#xf8ff; App Store</a>
-    <a class="btn android" href="https://play.google.com/store/apps/details?id=com.itargs.broccole.user">&#9654; Google Play</a>
+
+    <a class="store-btn google-play" href="https://play.google.com/store/apps/details?id=com.itargs.broccole.user">
+      <img src="store-badges.png" alt="Get it on Google Play" />
+    </a>
+
+    <a class="store-btn app-store" href="https://apps.apple.com/eg/app/broccole/id6746214631">
+      <img src="store-badges.png" alt="Download on the App Store" />
+    </a>
   </div>
   <script>
+    (function () {
+      // Dynamically calculate badge height after image loads
+      var img = new Image();
+      img.onload = function() {
+        var halfH = img.naturalHeight / 2;
+        var scale = 440 / img.naturalWidth;
+        var scaledHalf = halfH * scale;
+        document.querySelectorAll('.store-btn').forEach(function(btn) {
+          btn.style.height = scaledHalf + 'px';
+        });
+        document.querySelector('.app-store img').style.marginTop = '-' + scaledHalf + 'px';
+      };
+      img.src = 'store-badges.png';
+    })();
+
     (function () {
       var ua = navigator.userAgent || navigator.vendor || window.opera;
       if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
