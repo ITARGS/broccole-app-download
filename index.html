@@ -1,81 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Download Broccole</title>
-  <style>
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        background: #f0f7f0;
-        text-align: center;
-    }
-    .card {
-        background: white;
-        border-radius: 20px;
-        padding: 40px 32px 32px;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-        max-width: 380px;
-        width: 90%;
-    }
-    .logo {
-        width: 260px;
-        max-width: 100%;
-        margin-bottom: 8px;
-    }
-    p { color: #666; margin-bottom: 24px; font-size: 15px; }
-    .store-btn {
-        display: block;
-        margin: 10px auto;
-        width: 100%;
-        max-width: 220px;
-        border-radius: 12px;
-        text-decoration: none;
-        transition: opacity 0.2s, transform 0.15s;
-    }
-    .store-btn:hover {
-        opacity: 0.88;
-        transform: scale(1.03);
-    }
-    .store-btn img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 12px;
-    }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-        <img class="logo" src="logo.png" alt="Broccole" />
-        <p>Redirecting you to the right store&hellip;</p>
-    
-      <a class="store-btn google-play" href="https://play.google.com/store/apps/details?id=com.itargs.broccole.user">
-          <img src="google-play-badge.png" alt="Get it on Google Play" />
-      </a>a>
-    
-      <a class="store-btn app-store" href="https://apps.apple.com/eg/app/broccole/id6746214631">
-          <img src="app-store-badge.png" alt="Download on the App Store" />
-      </a>a>
-    </div>div>
-  <script>
-    (function () {
-        var ua = navigator.userAgent || navigator.vendor || window.opera;
-        if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-              window.location.replace("https://apps.apple.com/eg/app/broccole/id6746214631");
-        } else if (/android/i.test(ua)) {
-              window.location.replace("https://play.google.com/store/apps/details?id=com.itargs.broccole.user");
-        }
-    })();
-  </script>
-  </body>
-</html>html>
-  </script></p>
-  </body>
-  </style></title>
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Download Broccole</title>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f0f7f0;
+  text-align: center;
+}
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 32px 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  max-width: 380px;
+  width: 90%;
+}
+.logo {
+  width: 260px;
+  max-width: 100%;
+  margin-bottom: 8px;
+}
+p { color: #666; margin-bottom: 24px; font-size: 15px; }
+.store-btn {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.store-btn:hover {
+  opacity: 0.88;
+  transform: scale(1.03);
+}
+.store-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <img class="logo" src="logo.png" alt="Broccole" />
+  <p>Redirecting you to the right store&hellip;</p>
+
+  <a class="store-btn google-play" href="https://play.google.com/store/apps/details?id=com.itargs.broccole.user">
+    <img src="google-play-badge.png" alt="Get it on Google Play" />
+  </a>
+
+  <a class="store-btn app-store" href="https://apps.apple.com/eg/app/broccole/id6746214631">
+    <img src="app-store-badge.png" alt="Download on the App Store" />
+  </a>
+</div>
+<script>
+(function () {
+  var ua = navigator.userAgent || navigator.vendor || window.opera;
+  if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+    window.location.replace("https://apps.apple.com/eg/app/broccole/id6746214631");
+  } else if (/android/i.test(ua)) {
+    window.location.replace("https://play.google.com/store/apps/details?id=com.itargs.broccole.user");
+  }
+})();
+</script>
+</body>
+</html>
