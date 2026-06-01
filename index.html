@@ -12,38 +12,45 @@
       justify-content: center;
       min-height: 100vh;
       margin: 0;
-      background: #f5f5f5;
+      background: #f0f7f0;
       text-align: center;
     }
     .card {
       background: white;
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 40px 32px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      max-width: 360px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      max-width: 380px;
+      width: 90%;
     }
-    h1 { color: #2d7a3a; margin-bottom: 8px; }
-    p  { color: #666; margin-bottom: 24px; }
+    .logo {
+      width: 260px;
+      max-width: 100%;
+      margin-bottom: 8px;
+    }
+    p  { color: #666; margin-bottom: 28px; font-size: 15px; }
     .btn {
       display: inline-block;
       padding: 14px 28px;
-      border-radius: 10px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 15px;
       margin: 8px;
       color: white;
+      transition: opacity 0.2s;
     }
+    .btn:hover { opacity: 0.85; }
     .ios     { background: #000; }
     .android { background: #01875f; }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Broccole</h1>
+    <img class="logo" src="logo.png" alt="Broccole" />
     <p>Redirecting you to the right store&hellip;</p>
-    <a class="btn ios"     href="https://apps.apple.com/eg/app/broccole/id6746214631">App Store</a>
-    <a class="btn android" href="https://play.google.com/store/apps/details?id=com.itargs.broccole.user">Google Play</a>
+    <a class="btn ios"     href="https://apps.apple.com/eg/app/broccole/id6746214631">&#xf8ff; App Store</a>
+    <a class="btn android" href="https://play.google.com/store/apps/details?id=com.itargs.broccole.user">&#9654; Google Play</a>
   </div>
   <script>
     (function () {
